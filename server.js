@@ -1,5 +1,4 @@
 const express = require('express')
-const userRoute = require('./routes/userRoute')
 const http = require('http')
 const mongoose = require('mongoose')
 const app = express()
@@ -18,12 +17,14 @@ mongoose.set('useCreateIndex', true)
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+const userRoute = require('./routes/userRoute')
+const categoriesRoute = require('./routes/categoriesRoute')
+
 app.use('/user', userRoute)
-// app.use('/saldo')
+app.use('/categories', categoriesRoute)
 
 //port
 const server = http.createServer(app)
 server.listen(process.env.PORT || 3000);
-console.log('Rodando na porta ' + 3000)
 
 module.exports = app
