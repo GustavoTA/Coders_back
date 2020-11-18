@@ -1,0 +1,33 @@
+{
+  "name": "servicos",
+  "version": "1.0.0",
+  "description": "Servicos Itau Apresentar",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoTA/servicos.git"
+  },
+  "author": "Gustavo Tadeu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustavoTA/servicos/issues"
+  },
+  "homepage": "https://github.com/GustavoTA/servicos#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "jwt-decode": "^2.2.0",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.24.0",
+    "mongodb": "^3.5.4",
+    "mongoose": "^5.9.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
