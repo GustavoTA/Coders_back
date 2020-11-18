@@ -19,9 +19,11 @@ app.use(express.urlencoded({ extended: false }))
 
 const userRoute = require('./routes/userRoute')
 const categoriesRoute = require('./routes/categoriesRoute')
+const articlesRoute = require('./routes/articlesRoute')
 
 app.use('/user', userRoute)
 app.use('/categories', categoriesRoute)
+app.use('/articles', articlesRoute)
 
 //port
 const server = http.createServer(app)
