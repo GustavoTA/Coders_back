@@ -18,7 +18,8 @@ _router.get('/', (res, req) => {
 
 _router.post('/insert', (req, res) => {
     const body = req.body;
-    categoriesSchema.findOne({ nome: body.nome }, (err, data) => {
+    const slug = body.slug
+    categoriesSchema.findOne({ slug }, (err, data) => {
         if (data) {
             return res.send({ message: 'Está categoria já existe.' });
         } else {
